@@ -3,9 +3,10 @@ import pandas as pd
 import numpy as np
 import pickle
 from PIL import Image
+import os
 
-rfc=pickle.load(open('rfc.pkl', 'rb'))
-
+model_path = os.path.join(os.path.dirname(__file__), "rfc.pkl")
+rfc = pickle.load(open(model_path, 'rb'))
 
 st.title('Forest Cover Type Prediction')
 
